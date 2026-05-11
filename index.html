@@ -172,10 +172,10 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
 .summary-footer{
   background:#1e293b;border:1px solid #334155;
   border-radius:14px;padding:20px;margin-top:32px;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;
 }
-.sf-item{display:flex;align-items:center;gap:10px;font-size:12px;color:#94a3b8}
-.sf-item strong{color:#f1f5f9}
+.sf-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;white-space:nowrap}
+.sf-item strong{color:#f1f5f9;flex-shrink:0}
 
 /* ══════════════════════════════
    EXPENSE TAB
@@ -262,6 +262,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
   <div class="nav-logo">🌴 <span>미국 서부</span> <span class="sub" style="color:#94a3b8;font-weight:400;font-size:13px">가족여행 2026</span></div>
   <div class="nav-tabs">
     <button class="nav-tab on" onclick="show('itinerary',this)">🗓 일정</button>
+    <button class="nav-tab" onclick="show('flight',this)">✈️ 항공</button>
     <button class="nav-tab" onclick="show('expense',this)">💰 경비</button>
     <button class="nav-tab" onclick="show('route',this)">🗺 경로</button>
   </div>
@@ -422,7 +423,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(249,115,22,.2)">👩‍✈️</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-road)">
       <div class="tl-date">7월 31일 금</div>
-      <div class="tl-title">아내 SFO 배웅 + 실리콘밸리 투어 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">아내 SFO 배웅 + 실리콘밸리 투어 </div>
       <div class="tl-spots">
         <span class="spot">🚗 렌터카 2차 픽업 (오전)</span>
         <span class="spot">🕐 11:30 호텔 출발</span>
@@ -447,7 +448,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(249,115,22,.2)">🌊</div><div class="tl-line last"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-road)">
       <div class="tl-date">8월 1일 토</div>
-      <div class="tl-title">몬터레이 관광 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">몬터레이 관광 </div>
       <div class="tl-spots">
         <span class="spot">🐟 Monterey Bay Aquarium</span>
         <span class="spot">🚗 17-Mile Drive</span>
@@ -471,7 +472,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(14,165,233,.2)">🌊</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-big)">
       <div class="tl-date">8월 2일 일</div>
-      <div class="tl-title">빅서 해안 드라이브 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">빅서 해안 드라이브 </div>
       <div class="tl-spots">
         <span class="spot">🛣 PCH 1번 국도</span>
         <span class="spot">📸 Bixby Creek Bridge</span>
@@ -488,7 +489,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(14,165,233,.2)">🌲</div><div class="tl-line last"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-big)">
       <div class="tl-date">8월 3일 월</div>
-      <div class="tl-title">빅서 → 세쿼이아 이동 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">빅서 → 세쿼이아 이동 </div>
       <div class="tl-spots">
         <span class="spot">🌅 아침 빅서 추가 탐방</span>
         <span class="spot">🍽 SLO 점심 (선택)</span>
@@ -512,7 +513,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(22,163,74,.2)">🌲</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-seq)">
       <div class="tl-date">8월 4일 화</div>
-      <div class="tl-title">세쿼이아 본격 탐방 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">세쿼이아 본격 탐방 </div>
       <div class="tl-spots">
         <span class="spot">🌳 General Sherman Tree (세계 최대)</span>
         <span class="spot">🥾 Giant Forest 트레일</span>
@@ -528,7 +529,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(22,163,74,.2)">🎰</div><div class="tl-line last"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-seq)">
       <div class="tl-date">8월 5일 수</div>
-      <div class="tl-title">세쿼이아 → 라스베이거스 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">세쿼이아 → 라스베이거스 </div>
       <div class="tl-spots">
         <span class="spot">🌲 오전 추가 탐방</span>
         <span class="spot">🚗 라스베이거스 이동 (약 4.5시간)</span>
@@ -552,7 +553,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(168,85,247,.2)">🎰</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-veg)">
       <div class="tl-date">8월 5일 수 – 6일 목</div>
-      <div class="tl-title">라스베이거스 여유 일정 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">라스베이거스 여유 일정 </div>
       <div class="tl-spots">
         <span class="spot">🎡 스트립 구경 · 호텔 수영장</span>
         <span class="spot">🎆 프리몬트 스트리트 야경</span>
@@ -568,7 +569,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(168,85,247,.2)">🔵</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-veg)">
       <div class="tl-date">8월 7일 금</div>
-      <div class="tl-title">Sphere 관람 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">Sphere 관람 </div>
       <div class="tl-spots">
         <span class="spot">🔵 Sphere — Postcard from Earth</span>
         <span class="spot">🌃 스트립 야경</span>
@@ -601,7 +602,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(168,85,247,.2)">😴</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-veg)">
       <div class="tl-date">8월 10일 월 밤</div>
-      <div class="tl-title">라스베이거스 복귀 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">라스베이거스 복귀 </div>
       <div class="tl-spots"><span class="spot">🔄 투어 복귀 · 휴식</span></div>
       <div class="tl-hotel">🏨 라스베이거스 스트립</div>
     </div>
@@ -612,7 +613,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(249,115,22,.2)">🛣</div><div class="tl-line last"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-road)">
       <div class="tl-date">8월 11일 월</div>
-      <div class="tl-title">루트 66 경유 → LA 이동 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">루트 66 경유 → LA 이동 </div>
       <div class="tl-spots">
         <span class="spot">🛣 Historic Route 66 드라이브</span>
         <span class="spot">🍔 킥스 카페 (Route 66 성지)</span>
@@ -638,7 +639,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(245,158,11,.2)">🎢</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-la)">
       <div class="tl-date">8월 12일 수</div>
-      <div class="tl-title">Universal Studios Hollywood <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">Universal Studios Hollywood </div>
       <div class="tl-spots">
         <span class="spot">🎮 슈퍼 닌텐도 월드</span>
         <span class="spot">⚡ 해리포터 위저딩 월드</span>
@@ -653,7 +654,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(245,158,11,.2)">🛍</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-la)">
       <div class="tl-date">8월 13일 목</div>
-      <div class="tl-title">쇼핑 & 해변 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">쇼핑 & 해변 </div>
       <div class="tl-spots">
         <span class="spot">🛒 Citadel Outlets · The Grove</span>
         <span class="spot">🎡 Santa Monica Pier</span>
@@ -668,7 +669,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(245,158,11,.2)">🎡</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-la)">
       <div class="tl-date">8월 14일 금</div>
-      <div class="tl-title">Disneyland <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">Disneyland </div>
       <div class="tl-spots">
         <span class="spot">🏰 디즈니랜드 하루 풀코스</span>
         <span class="spot">🎢 인기 어트랙션 공략</span>
@@ -682,7 +683,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(245,158,11,.2)">🔭</div><div class="tl-line"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-la)">
       <div class="tl-date">8월 15일 토 낮</div>
-      <div class="tl-title">Griffith Observatory + LA 여유 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">Griffith Observatory + LA 여유 </div>
       <div class="tl-spots">
         <span class="spot">🌌 그리피스 천문대 · LA 야경</span>
         <span class="spot">🖼 The Getty Center</span>
@@ -714,7 +715,7 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <div class="tl-left"><div class="tl-node" style="background:rgba(245,158,11,.2)">✈️</div><div class="tl-line last"></div></div>
     <div class="tl-card" style="border-left-color:var(--c-la)">
       <div class="tl-date">8월 16일 일</div>
-      <div class="tl-title">LA → 인천 귀국 <span class="badge badge-duo">아빠+아들</span></div>
+      <div class="tl-title">LA → 인천 귀국 </div>
       <div class="tl-spots">
         <span class="spot">🚗 렌터카 LAX 반납</span>
         <span class="spot">🛫 LAX 출국</span>
@@ -726,17 +727,152 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
 
   <!-- 요약 푸터 -->
   <div class="summary-footer">
-    <div class="sf-item">🚗 렌터카 1차 <strong>7/28 SFO 08:00 픽업 → 7/29 저녁 반납</strong></div>
-    <div class="sf-item">🚗 렌터카 2차 <strong>7/31 SF 픽업 → 8/16 LAX 반납</strong></div>
-    <div class="sf-item">✈️ 아내 귀국 <strong>7/31 SFO · 15:00 출발</strong></div>
-    <div class="sf-item">🌲 국립공원 <strong>요세미티 · 세쿼이아 · 그랜드캐니언 · 자이언 · 브라이스</strong></div>
+    <div class="sf-item">🚗 <strong>렌터카 1차</strong> &nbsp; 7/28 SFO 08:00 픽업 → 7/29 저녁 반납</div>
+    <div class="sf-item">🚗 <strong>렌터카 2차</strong> &nbsp; 7/31 SF 픽업 → 8/16 LAX 반납</div>
+    <div class="sf-item">✈️ <strong>아내 귀국</strong> &nbsp; 7/31 SFO · 15:00 출발</div>
+    <div class="sf-item">🌲 <strong>국립공원</strong> &nbsp; 요세미티 · 세쿼이아 · 그랜드캐니언</div>
   </div>
 
 </div><!-- /tl-wrap -->
 </div><!-- /panel-itinerary -->
 
 <!-- ══════════════════════════════
-     패널 2 : 경비
+     패널 2 : 항공
+══════════════════════════════ -->
+<div id="panel-flight" class="panel">
+<div style="max-width:820px;margin:0 auto;padding:48px 20px">
+
+  <div style="text-align:center;margin-bottom:32px">
+    <div style="font-size:22px;font-weight:800;color:#f1f5f9;margin-bottom:6px">✈️ 항공 일정</div>
+    <div style="font-size:13px;color:#94a3b8">에어프레미아 · 2026 미국 서부 가족여행</div>
+  </div>
+
+  <!-- 조은아 -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:36px;height:36px;border-radius:50%;background:rgba(236,72,153,.2);display:flex;align-items:center;justify-content:center;font-size:18px">👩</div>
+      <div>
+        <div style="font-size:15px;font-weight:700;color:#f1f5f9">조은아 <span style="font-size:12px;font-weight:400;color:#94a3b8">· 1명</span></div>
+        <div style="font-size:11px;color:#94a3b8">왕복 · 에어프레미아</div>
+      </div>
+    </div>
+
+    <!-- 출발편 -->
+    <div style="background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;margin-bottom:12px;border-left:3px solid #ec4899">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div style="font-size:11px;font-weight:700;color:#ec4899;letter-spacing:.06em">출국 · 에어프레미아</div>
+        <div style="font-size:11px;color:#94a3b8;background:rgba(255,255,255,.06);padding:3px 10px;border-radius:99px">7월 25일 토 · 직항 · 11시간</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0">
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">18:00</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">ICN</div>
+          <div style="font-size:11px;color:#94a3b8">인천</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 12px">
+          <div style="font-size:11px;color:#94a3b8">✈️ ─────────────</div>
+          <div style="font-size:10px;color:#94a3b8">직항</div>
+        </div>
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">13:00</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">SFO</div>
+          <div style="font-size:11px;color:#94a3b8">샌프란시스코</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 귀국편 -->
+    <div style="background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;border-left:3px solid #94a3b8">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div style="font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:.06em">귀국 · 에어프레미아</div>
+        <div style="font-size:11px;color:#94a3b8;background:rgba(255,255,255,.06);padding:3px 10px;border-radius:99px">7월 31일 금 · 직항 · 12시간 40분</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0">
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">15:30</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">SFO</div>
+          <div style="font-size:11px;color:#94a3b8">샌프란시스코</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 12px">
+          <div style="font-size:11px;color:#94a3b8">✈️ ─────────────</div>
+          <div style="font-size:10px;color:#94a3b8">직항</div>
+        </div>
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">20:10</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">ICN</div>
+          <div style="font-size:11px;color:#94a3b8">인천 <span style="font-size:10px;color:#fcd34d">+1일</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 구분선 -->
+  <div style="height:1px;background:#334155;margin:8px 0 28px"></div>
+
+  <!-- 아빠+이안 -->
+  <div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:36px;height:36px;border-radius:50%;background:rgba(99,179,237,.2);display:flex;align-items:center;justify-content:center;font-size:18px">👨‍👦</div>
+      <div>
+        <div style="font-size:15px;font-weight:700;color:#f1f5f9">아빠 + 이안 <span style="font-size:12px;font-weight:400;color:#94a3b8">· 2명</span></div>
+        <div style="font-size:11px;color:#94a3b8">왕복 · 에어프레미아</div>
+      </div>
+    </div>
+
+    <!-- 출발편 -->
+    <div style="background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;margin-bottom:12px;border-left:3px solid #63b3ed">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div style="font-size:11px;font-weight:700;color:#63b3ed;letter-spacing:.06em">출국 · 에어프레미아</div>
+        <div style="font-size:11px;color:#94a3b8;background:rgba(255,255,255,.06);padding:3px 10px;border-radius:99px">7월 25일 토 · 직항 · 11시간</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0">
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">18:00</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">ICN</div>
+          <div style="font-size:11px;color:#94a3b8">인천</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 12px">
+          <div style="font-size:11px;color:#94a3b8">✈️ ─────────────</div>
+          <div style="font-size:10px;color:#94a3b8">직항</div>
+        </div>
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">13:00</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">SFO</div>
+          <div style="font-size:11px;color:#94a3b8">샌프란시스코</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 귀국편 -->
+    <div style="background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px;border-left:3px solid #94a3b8">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div style="font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:.06em">귀국 · 에어프레미아</div>
+        <div style="font-size:11px;color:#94a3b8;background:rgba(255,255,255,.06);padding:3px 10px;border-radius:99px">8월 16일 일 · 직항</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0">
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">10:50</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">LAX</div>
+          <div style="font-size:11px;color:#94a3b8">로스앤젤레스</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 12px">
+          <div style="font-size:11px;color:#94a3b8">✈️ ─────────────</div>
+          <div style="font-size:10px;color:#94a3b8">직항</div>
+        </div>
+        <div style="text-align:center;min-width:90px">
+          <div style="font-size:28px;font-weight:800;color:#f1f5f9">15:50</div>
+          <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-top:2px">ICN</div>
+          <div style="font-size:11px;color:#94a3b8">인천 <span style="font-size:10px;color:#fcd34d">+1일</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div><!-- /panel-flight -->
+
+<!-- ══════════════════════════════
+     패널 3 : 경비
 ══════════════════════════════ -->
 <div id="panel-expense" class="panel">
 <div class="exp-wrap">
@@ -891,15 +1027,15 @@ body{font-family:var(--ff);background:var(--c-bg);color:var(--c-text);min-height
     <circle cx="368" cy="280" r="10" fill="#9f7aea" stroke="#fff" stroke-width="2.5"/>
     <text x="368" y="284" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">⑥</text>
     <text x="382" y="272" fill="#fff" font-size="12" font-weight="bold" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">라스베이거스</text>
-    <text x="382" y="286" fill="#d6bcfa" font-size="10" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">8/5~8 🎰</text>
+    <text x="382" y="286" fill="#d6bcfa" font-size="10" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">8/5~11 🎰</text>
     <circle cx="455" cy="360" r="9" fill="#e53e3e" stroke="#fff" stroke-width="2"/>
     <text x="455" y="364" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">⑦</text>
     <text x="469" y="352" fill="#fff" font-size="12" font-weight="bold" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">그랜드캐니언</text>
-    <text x="469" y="366" fill="#feb2b2" font-size="10" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">8/6~7 🌄</text>
+    <text x="469" y="366" fill="#feb2b2" font-size="10" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">8/8~10 🌄</text>
     <circle cx="200" cy="430" r="11" fill="#f6ad55" stroke="#fff" stroke-width="2.5"/>
     <text x="200" y="434" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">⑧</text>
     <text x="218" y="422" fill="#fff" font-size="12" font-weight="bold" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">로스앤젤레스</text>
-    <text x="218" y="436" fill="#fefcbf" font-size="10" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">8/8~16 ⚽✈️</text>
+    <text x="218" y="436" fill="#fefcbf" font-size="10" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">8/12~16 ⚽✈️</text>
     <rect x="25" y="522" width="650" height="82" rx="10" fill="#0d1117" opacity="0.75"/>
     <line x1="42" y1="545" x2="80" y2="545" stroke="#63b3ed" stroke-width="2.5" stroke-dasharray="6,3"/>
     <text x="88" y="549" fill="#cbd5e0" font-size="11" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">주 이동 경로</text>
